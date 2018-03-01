@@ -1,0 +1,66 @@
+create table department(DEPARTMENT_ID number(10),DEPARTMENT_NAME VARCHAR2(20),
+MANAGER_ID number(10),LOCATION_ID number(10));
+
+
+insert into department values(10,'Administration',200,1700);
+
+insert into department values(20,'Marketing',201,1800);
+
+insert into department values(50,'Shipping',124,1500);
+
+insert into department values(60,'IT',103,1400);
+
+insert into department values(80,'Sales',149,2500);
+
+insert into department values(90,'Executive',100,1700);
+
+insert into department values(110,'Accounting',205,1700);
+
+insert into department values(190,'Contracting',null,1700);
+
+commit;
+
+create table employees(EMPLOYEE_ID number(10),FIRST_NAME varchar2(20),LAST_NAME varchar2(20),EMAIL varchar2(20),PHONE_NUMBER varchar2(30),HIRE_DATE date,JOB_ID varchar2(20),SALARY number(20),COMMISSION_PCT number(10),MANAGER_ID number(10),DEPARTMENT_ID number(10));
+
+
+insert into employees values(100,'steven','king','SKING','515.123.4567','17-JUN-87','AD_PRES',24000,null,null,90);
+
+insert into employees values(101,'Neena','kochhar','NKOCHHAR','515.123.458','21-SEP-89','AD_VP',17000,null,100,90);
+
+insert into employees values(102,'Lex','Dehaan','LDEHAAN','515.123.4569','17-JAN-93','AD_VP',17000,null,100,90);
+
+insert into employees values(103,'Alexander','Hunold','AHUNOLD','590.423.4567','3-JAN-90','IT_PROG',9000,null,102,60);
+
+insert into employees values(104,'Bruce','Ernst','BERNST','590.423.4568','21-MAY-91','IT_PROG',6000,null,103,60);
+
+insert into employees values(107,'Diana','Lorentz','DLORENTZ','590.423.5567','7-FEB-99','IT_PROG',4200,null,103,60);
+
+insert into employees values(124,'Kebin','Mourgos','KMOURGOS','650.123.5234','16-NOV-99','ST_MAN',5800,null,100,50);
+
+insert into employees values(141,'Trenna','Rajs','TRAJS','650.121.8009','17-OCT-95','ST_CLERK',3500,null,124,50);
+
+insert into employees values(142,'Curtis','Davies','CDAVIES','650.121.2994','29-JAN-97','ST_CLERK',3100,null,124,50);
+
+insert into employees values(143,'Randall','Matos','RMATOS','650.121.2874','15-MAR-98','ST_CLERK',2600,null,124,50);
+
+insert into employees values(144,'Peter','Vargas','PVARGAS','650.121.2004','9-JUL-98','ST_CLERK',2500,null,124,50);
+
+insert into employees values(149,'Eleni','Zlotkey','EZLOTKEY','011.44.1344.429018','29-JAN-00','SA_MAN',10500,.2,100,80);
+
+insert into employees values(174,'Ellen','Abel','EABEL','011.44.1644.429267','11-MAY-96','SA_REP',11000,.3,149,80);
+
+insert into employees values(176,'Jonathon','Taylor','JTAYLOR','011.44.1644.429265','24-MAR-98','SA_REP',8600,.2,149,80);
+
+insert into employees values(178,'Kimberely','Grant','KGRANT','011.44.1644.429263','24-MAY-99','SA_REP',7000,.15,149,null);
+
+insert into employees values(200,'Jennifer','Whalen','JWHALEN','515.123.4444','17-SEP-87','AD_ASST',4400,null,101,10);
+
+insert into employees values(201,'Michael','Hartstein','MHARTSTE','515.123.5555','17-FEB-96','MK_MAN',13000,null,100,20);
+
+insert into employees values(202,'Pat','Fay','PFAY','603.123.6666','17-AUG-97','MK_REP',6000,null,201,20);
+
+insert into employees values(205,'Sheliey','Higgins','SHIGGINS','515.123.8080','7-JUN-94','AC_MGR',12000,null,101,110);
+
+insert into employees values(206,'William','Gietz','WGIETZ','515.123.8181','7-JUN-94','AC_ACCOUNT',8300,null,205,110);
+
+COMMIT;

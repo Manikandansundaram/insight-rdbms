@@ -1,0 +1,38 @@
+create table countries(COUNTRY_ID CHAR(2),COUNTRY_NAME VARCHAR2(40),REGION_ID NUMBER);
+
+insert into countries values('CA','Canada',2);
+insert into countries values('DE','Germany',1);
+insert into countries values('UK','United Kingdom',1);
+insert into countries values('US','uNITED sTATES OF America',1);
+
+create table job_history(employee_id number(6) not null,start_date date not null,end_date date not null,job_id varchar2(10) not null,department_id number(4));
+
+
+insert into job_history values(102,'13-jan-93','24-jul-98','it_prog',60);
+insert into job_history values(101,'21-sep-89','27-oct-93','ac_account',110);
+insert into job_history values(101,'28-oct-93','15-mar-97','ac_mgr',110);
+insert into job_history values(201,'17-feb-96','19-dec-99','mk_rep',20);
+insert into job_history values(114,'24-mar-98','31-dec-99','st_clerk',50);
+insert into job_history values(122,'01-jan-99','31-dec-99','st_clerk',60);
+insert into job_history values(200,'17-sep-87','24-jul-98','ad_asst',90);
+insert into job_history values(176,'24-mar-98','31-dec-98','sa_rep',80);
+insert into job_history values(176,'01-jan-99','31-dec-99','sa_man',80);
+insert into job_history values(200,'01-jul-94','31-dec-98','ac_account',90);
+
+create table locations(location_id number(4),street_address varchar2(40),postal_code varchar2(12),city varchar2(30),state_province varchar2(25),country_id char(2));
+
+insert into locations values(1400,'2014 Jabberwocky Rd',26192,'southlake','Texas','us);
+insert into locations values(1500,'2011 Interiors Blvd',99236,'South San Francisco','california','US');
+insert into locations values(1700,'2004 cHARADE rD',98199,'sEATTLE','wASHINGTON','US');
+insert into locations values(1800,'460 bLOOR sT w','on m5s 1xb','Toronto','Ontario','CA');
+insert into locations values(2500,'mAGDALEN cENTRE,tHE oXFORD sCIENCE pARK','OX9 9ZB','oXFORD','oXFORD','UK');
+
+create table regions(region_id number not null,region_name varchar2(25));
+
+insert into regions values(1,'Europe');
+insert into regions values(2,'Americas');
+insert into regions values(3,'Asia');
+insert into regions values(4,'Middle East and Africa');
+
+
+commit;
